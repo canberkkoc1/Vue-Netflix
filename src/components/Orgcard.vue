@@ -95,10 +95,12 @@ import PlusIcon from '@/icons/plus.svg'
 
 <style scoped>
 .example{
+    margin-top: 2rem;
     position: relative;
      min-height: 629px;
      width: 100%;
      background-color: rgb(0, 0, 0,.8);
+     overflow: hidden;
    
 }
 .header{

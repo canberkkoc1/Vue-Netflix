@@ -4,32 +4,33 @@
             <video autoplay loop controls class="infoVideo">
                 <source src="../assets/video/monster.mp4" type="video/mp4">
             </video>
-        </div>
-        <div class="video-content">
-            <div class="content">
-        </div>
-            <h1>Monsters, Inc. 3D</h1>
-            <span class="spanTen">
-                <TopTenIcon class="topten"></TopTenIcon> <h2>Türkiye'de Bugün Bir Numara </h2>
-            </span>                
-                <p class="info-movie">
-                Canavarlar Dünyası adlı kendilerine has bir diyarda yaşayan ve enerji toplamak
-                için arada bir insanların bulunduğu ortamlara gelmek zorunda kalan canavarların 
-                öyküsünü anlatıyor.    
-                </p>
-                <div class="buttons-view">
-                    <button class="play-button">
-                        <StarIcon class="start-icon"></StarIcon>Oynat</button>
-                    <button class="Info-button">
-                        <InfoIcon class="info-icon"></InfoIcon>Daha Fazla Bilgi</button>
+        </div>       
+            
+            <div class="spans">               
+                <h1>Monsters, Inc. 3D</h1>
+                <span class="spanTen">
+                    <TopTenIcon class="topten"></TopTenIcon> <h2>Türkiye'de Bugün Bir Numara </h2>
+                </span>                
+                    <p class="info-movie">
+                    Canavarlar Dünyası adlı kendilerine has bir diyarda yaşayan ve enerji toplamak
+                    için arada bir insanların bulunduğu ortamlara gelmek zorunda kalan canavarların 
+                    öyküsünü anlatıyor.    
+                    </p>
+                    <div class="buttons-view">
+                        <button class="play-button">
+                            <StarIcon class="start-icon"></StarIcon>Oynat</button>
+                        <button class="Info-button">
+                            <InfoIcon class="info-icon"></InfoIcon>Daha Fazla Bilgi</button>
 
-                </div>
+                
+            </div>
+        </div>
+        
                 <div class="replay">
                     <button class="border-button">
                         <ReplayIcon class="replay-icon"></ReplayIcon>
                     </button>
                 </div>
-        </div>
     </div>
 </template>
 
@@ -51,46 +52,38 @@ import ReplayIcon from '@/icons/replay.svg'
 
 <style scoped>
 .video-container{
-    display: block;
-}
-.video{
-width: 100%;
-  max-height: 700px;
+    display: inline-block;
+    width: 100%;
+  height: 780px;
   overflow: hidden;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: -100;
+  position: relative;
+    
+    }
+.video{
+    position: absolute; 
+    top: 0; left:0;
+    width: 100%; height: 100%; 
+    
 }
 .infoVideo{
      position: relative;
     width: auto;
     min-width: 100%;
     height: auto;
-    /*background: transparent url(video-bg.jpg) no-repeat; */
-    /* background-size: cover */
-   
 }
-.video-content{
-  width: 40%;
-  height: 30rem;
-  overflow: hidden;
-  position: fixed;
-  top: 15rem;
-  left: 2rem;
-  z-index: -100;
-  padding: 2rem 0 0 1rem;
-  color: white;
-}
-.content {
-    position: relative;
+
+.spans {
+  position: relative;
+  top: 30%;
+  width: 50%;
+  height: 50%;
   color: #f1f1f1;
-  height: 10%;
-  width: 100%;
   padding: 20px;
+  
 }
+
 .replay{
-    position: fixed;
+    position: absolute;
     right: 1rem;
     top: 40rem;
     color: #f1f1f1;
