@@ -25,12 +25,13 @@
                 
             </div>
         </div>
-        
                 <div class="replay">
-                    <button class="border-button">
-                        <ReplayIcon class="replay-icon"></ReplayIcon>
+                    <button class="border-button" @click="open ^= true" vue>
+                        <MuteIcon class="mute-icon" v-show="!open"></MuteIcon>
+                        <LoudIcon class="mute-icon" v-show="open"></LoudIcon>
                     </button>
                 </div>
+        
     </div>
 </template>
 
@@ -38,14 +39,21 @@
 import TopTenIcon from '@/icons/top10.svg'
 import StarIcon from '@/icons/start.svg'
 import InfoIcon from '@/icons/information.svg'
-import ReplayIcon from '@/icons/replay.svg'
+import MuteIcon from '@/icons/mute.svg'
+import LoudIcon from '@/icons/loud.svg'
     export default {
         name:"Infovideo",
         components:{
             TopTenIcon,
             StarIcon,
             InfoIcon,
-            ReplayIcon,
+            MuteIcon,
+            LoudIcon
+        },
+        data:()=>{
+            return {
+                open:false
+            }
         }
     }
 </script>
@@ -80,17 +88,6 @@ import ReplayIcon from '@/icons/replay.svg'
   color: #f1f1f1;
   padding: 20px;
   
-}
-
-.replay{
-    position: absolute;
-    right: 1rem;
-    top: 40rem;
-    color: #f1f1f1;
-    height: 4rem;
-    width: 8rem;
-    padding: 20px;
-
 }
 .topten{
     width: 45px;
@@ -151,12 +148,17 @@ import ReplayIcon from '@/icons/replay.svg'
     height:24px ;
     margin-right: .5rem;
 }
-.replay-icon{
+.replay{
+    position: absolute !important;
+}
+.mute-icon{
     width:24px ;
     height:24px ;
+    fill:white !important;
 }
 .border-button{
-    position: relative;
+    position: absolute;
+    top: 12px;
     border: 2px solid white;
     border-radius: 999px;
     padding: .5rem;

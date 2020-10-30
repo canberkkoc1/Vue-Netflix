@@ -1,12 +1,18 @@
 <template>
     <div class="dizi">
-      <h1 >HELLLO film</h1>
+      <InfoVideo></InfoVideo>  
+      <NormalCard></NormalCard>
     </div>
 </template>
 
 <script>
+import InfoVideo from '@/components/Infovideo'
+import NormalCard from '@/components/Normalcard'
     export default {
-        name:"Filmler"
+        name:"Diziler",
+        components:{
+            InfoVideo,NormalCard,
+        }
     }
 </script>
 

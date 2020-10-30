@@ -17,7 +17,7 @@
              <button class="plus-button">
                  <PlusIcon class="plusIcon"></PlusIcon>
              </button>
-             <div class="content-span">
+              <div class="content-span">
                  <h1>Name</h1>
                  <div class="span-user">
                      <span class="green">%98 eşleşme</span>
@@ -29,7 +29,7 @@
                      <span>Heyacanlı</span>
                      <span>Destansı</span>
                  </div>
-             </div>
+             </div> 
           </div>
       </div>
       </swiper-slide>

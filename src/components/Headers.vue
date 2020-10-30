@@ -74,8 +74,9 @@ import NetflixIcon from '@/icons/netflix.svg'
     justify-content: space-between;
     background-color: transparent;
     height: 65px;
-    background-color:rgb(29, 25, 22,.3) ;
+    background-color:rgba(110, 110, 110, 0.3) ;
 }
+
 .left{
     display: flex;
     align-items: center;
