@@ -1,23 +1,18 @@
 <template>
   <div class="app">
     <Header></Header>
-    <div class="InfoVideo">
-      <InfoVideo></InfoVideo>
-    </div>
-      <OrgCard></OrgCard>
+    <router-view />
   </div>
 </template>
 
 <script>
 import Header from '@/components/Headers'
-import InfoVideo from '@/components/Infovideo'
-import OrgCard from '@/components/Orgcard'
+
   export default {
     name:"app",
     components:{
       Header,
-      InfoVideo,
-      OrgCard
+     
     }
   }
 </script>

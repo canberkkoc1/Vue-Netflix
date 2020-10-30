@@ -1,14 +1,39 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import Home from "../views/home/home.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
-  // {
-  //   path: "/",
-  //   name: "Home",
-  //   component: Home
-  // },
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/dizi",
+    name: "Diziler",
+    component: () =>
+      import(/* webpackChunkName: "dizi" */ "../views/diziler/diziler.vue"),
+  },
+  {
+    path: "/film",
+    name: "Filmler",
+    component: () =>
+      import(/* webpackChunkName: "film" */ "../views/filmler/filmler.vue"),
+  },
+  {
+    path: "/enyeni",
+    name: "Enyeni",
+    component: () =>
+      import(/* webpackChunkName: "enyeni" */ "../views/enyeni/enyeni.vue"),
+  },
+  {
+    path: "/listem",
+    name: "Listem",
+    component: () =>
+      import(/* webpackChunkName: "liste" */ "../views/listem/listem.vue"),
+  },
   // {
   //   path: "/about",
   //   name: "About",
