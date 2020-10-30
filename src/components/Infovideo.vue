@@ -1,11 +1,13 @@
 <template>
     <div class="video-container">
         <div class="video">
-            <video autoplay loop class="infoVideo">
+            <video autoplay loop controls class="infoVideo">
                 <source src="../assets/video/monster.mp4" type="video/mp4">
             </video>
         </div>
-        <div class="content">
+        <div class="video-content">
+            <div class="content">
+        </div>
             <h1>Monsters, Inc. 3D</h1>
             <span class="spanTen">
                 <TopTenIcon class="topten"></TopTenIcon> <h2>Türkiye'de Bugün Bir Numara </h2>
@@ -49,26 +51,42 @@ import ReplayIcon from '@/icons/replay.svg'
 
 <style scoped>
 .video-container{
-    width: 100%;
-    height: 70vh;
-    overflow: hidden;
+    display: block;
+}
+.video{
+width: 100%;
+  max-height: 700px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -100;
 }
 .infoVideo{
-    position: fixed;
-    right: 0;
-    bottom: 0;
+     position: relative;
+    width: auto;
     min-width: 100%;
-    min-height: 100%;
-    z-index: -99;
+    height: auto;
+    /*background: transparent url(video-bg.jpg) no-repeat; */
+    /* background-size: cover */
    
 }
-.content {
-    position: fixed;
-  left: 1rem;
+.video-content{
+  width: 40%;
+  height: 30rem;
+  overflow: hidden;
+  position: fixed;
   top: 15rem;
+  left: 2rem;
+  z-index: -100;
+  padding: 2rem 0 0 1rem;
+  color: white;
+}
+.content {
+    position: relative;
   color: #f1f1f1;
-  height: 50%;
-  width: 50%;
+  height: 10%;
+  width: 100%;
   padding: 20px;
 }
 .replay{
@@ -98,7 +116,7 @@ import ReplayIcon from '@/icons/replay.svg'
 .buttons-view{
     margin-top: 2rem;
     display: flex;
-    width: 40%;
+    width: 45%;
     justify-content: space-around;
 }
 .play-button {

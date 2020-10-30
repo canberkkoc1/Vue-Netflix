@@ -1,18 +1,25 @@
 <template>
     <div class="container">
-        <h1>Netflix Orjinal İçerikler</h1>
-        <div class="net-card">
-            <img src="" alt="">
-        </div>
+        
+
     </div>
 </template>
 
 <script>
+ 
     export default {
-        name:"Orgcard"
+        name:"Orgcard",
+        components:{
+            VueSlickCarousel
+        },       
+        
     }
 </script>
 
 <style scoped>
-
+.container{
+    background-color:rgb(219, 219, 192) ;
+    height: 500px;
+   
+}
 </style>
