@@ -150,6 +150,12 @@ import LoudIcon from '@/icons/loud.svg'
 }
 .replay{
     position: absolute !important;
+    right: 1rem;
+    top: 30rem;
+    color: #f1f1f1;
+    height: 4rem;
+    width: 8rem;
+    padding: 20px;
 }
 .mute-icon{
     width:24px ;
@@ -169,15 +175,19 @@ import LoudIcon from '@/icons/loud.svg'
     background-color:rgb(192,192,192,.7) ;
 }
 
-@media (max-width:1400px){
+@media (min-width:1390px){
+    .spans{
+        width: 35%;
+    }
     .replay{
-    position: fixed;
+    position: absolute;
     right: 1rem;
     top: 30rem;
     color: #f1f1f1;
     height: 4rem;
     width: 8rem;
     padding: 20px;
+
 
 }
 .buttons-view{

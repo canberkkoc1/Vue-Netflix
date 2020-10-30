@@ -101,7 +101,7 @@
       <br>
 
       <div class="header">
-            <h1>Tanıdık Diziler</h1>
+            <h1>Tekrar İzle</h1>
         </div>
     <swiper class="swiper" :options="swiperOption">
       <swiper-slide class="slider"
