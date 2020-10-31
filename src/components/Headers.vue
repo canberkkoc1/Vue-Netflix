@@ -129,4 +129,6 @@ import NetflixIcon from '@/icons/netflix.svg'
 .alrm-icon{
     fill:white;
 }
+
+
 </style>

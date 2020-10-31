@@ -84,7 +84,7 @@
                         <img src="https://occ-0-3727-300.1.nflxso.net/dnm/api/v6/0RO1pLmU93-gdXvuxd_iYjzPqkc/AAAABdqT826jIxOSEYfpd8A8jQUz2swaIU2afge8kD4bCYIhMw_VDd-G9QxNUl99KU0-tcNya1vnjZmIbPHxhpET2CmcDg.png?r=8f0" alt="">
                         <div class="info-kul">
                             <h2>Çocuk</h2>
-                            <p>Üst sınır 7+</p>
+                            <p>Üst sınır 7+                 </p>
                         </div>
                     </div>
                 
@@ -125,6 +125,7 @@ import MastercardIcon from '@/icons/mastercard.svg'
 .master-icon{
     width: 24px;
 }
+
 .mem-pay{
     display: flex;
     flex-direction: column;
@@ -137,7 +138,7 @@ import MastercardIcon from '@/icons/mastercard.svg'
 .frbordr{
     display: flex;
     justify-content: space-between;
-    width: 74%;
+    width: 64%;
     border-bottom: 2px solid grey;
     height: 6rem;
         
@@ -190,18 +191,20 @@ a{
     color:rgb(0, 0, 255,.8) !important;
 }
 .pays{
-    margin-left: 210px;
-    margin-top: 2rem;
     margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: 90px;
     width: 600px;
-    border-bottom: 2px solid grey;
     display: flex;
 }
 .mastercard{
+    border-bottom: 2px solid grey;
     width: 100%;
+    margin-right: 10rem;
     display: flex;
     justify-content: space-between;
 }
+
 .card-indorma h3{
     font-weight: 500;
 }
@@ -289,6 +292,7 @@ a{
     border-bottom: 1px solid grey;
 }
 .ac-3{
+    
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -297,17 +301,22 @@ a{
     border-bottom: 1px solid grey;
 }
 .ac-3 img{
-    margin-right: 63px;
+    
 }
 
-
+.ac-3 .info-kul{
+    margin-right:5rem;
+}
 
 img{
     width: 60px;
     height: 60px;
 }
 
-@media (max-width: 1390){
+@media (min-width: 1200px){
+    .pays{
+        margin-left:21rem;
+    }
     
 }
 </style>

@@ -175,14 +175,28 @@ import LoudIcon from '@/icons/loud.svg'
     background-color:rgb(192,192,192,.7) ;
 }
 
-@media (min-width:1390px){
+@media (max-width:1200px){
+    .video-container{
+        height: 500px;
+        top: 0;
+        
+    }
     .spans{
-        width: 35%;
+        position: absolute;
+        top: 5rem;
+        
+    }
+    .spans h1{
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    .topten{
+        width: 20px;
     }
     .replay{
     position: absolute;
     right: 1rem;
-    top: 30rem;
+    top: 20rem;
     color: #f1f1f1;
     height: 4rem;
     width: 8rem;
@@ -190,12 +204,34 @@ import LoudIcon from '@/icons/loud.svg'
 
 
 }
+.border-button{
+    position: absolute;
+    top: 0;
+}
+.spanTen{
+    display: flex;
+    align-items: center;
+}
+.spanTen h2{
+    font-size: 1rem;
+}
 .buttons-view{
+    position: absolute;
     margin-top: 2rem;
     display: flex;
-    width: 55%;
+    width: 60%;
     justify-content: space-around;
 }
+.play-button{
+    font-size: .6rem;
+    width: 100px;
 }
+.Info-button{
+    font-size: .6rem;
+    width: 150px;
+}
+}
+
+
 
 </style>

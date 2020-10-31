@@ -222,6 +222,9 @@ import DislikeIcon from '@/icons/dislike.svg'
   min-height: 100vh;
   position: relative;
 }
+.header{
+  background-color: transparent;
+}
 .header h1{
   color:white;
   margin:2rem 1rem;
@@ -249,7 +252,7 @@ import DislikeIcon from '@/icons/dislike.svg'
   }
   .spans{    
     display: none;
-     position: absolute;
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0; 
@@ -339,5 +342,50 @@ import DislikeIcon from '@/icons/dislike.svg'
   display: block;
 } 
 
+@media (max-width:1200px){
+ 
+  .buttons-card-icons{
+    width: 100%;
+    justify-content: space-evenly;
+}
+  .start-button{
+   width: 2rem;
+    height: 2rem;
+  }
+  .startIcon{
+    fill: black;
+    position: absolute;
+  left: 4px;
+  top: 4px;
+}
+.likeIcon{
+   position: absolute;
+  left: 4px;
+  top: 2px;
+}
+.plusIcon{
+     position: absolute;
+  left: 3px;
+  top: 4px;
 
+}
+.plus-button{
+  width: 2rem;
+    height: 2rem;
+}
+.like-button{
+ width: 2rem;
+    height: 2rem;
+}
+.dislike-button{
+  width: 2rem;
+    height: 2rem;
+}
+.dislikeIcon{
+  position: absolute;
+  left: 4px;
+  top: 4px;
+    
+} 
+}
 </style>

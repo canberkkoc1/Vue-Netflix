@@ -95,7 +95,7 @@ import PlusIcon from '@/icons/plus.svg'
 
 <style scoped>
 .example{
-    margin-top: 2rem;
+    
     position: relative;
      min-height: 629px;
      width: 100%;
@@ -105,6 +105,9 @@ import PlusIcon from '@/icons/plus.svg'
 }
 .header{
     margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 1rem;
+    background-color: transparent;
 }
 .swiper{
     height: 600px;
@@ -112,7 +115,6 @@ import PlusIcon from '@/icons/plus.svg'
 }
 .image-div{
     position: relative;
-    background-color: rgb(9, 5, 231);
     height: 100%;
     width: 301px;
     
@@ -221,5 +223,60 @@ button:hover{
 }
 img:hover + .spans{
     display: inline-block;
+}
+
+@media (max-width:1200px){
+    .header{
+        padding-top: 1rem;
+        margin:0;
+    }
+    .image-div{
+        height: 70%;
+        overflow: hidden;
+    }
+    .image{
+        width:200px ;
+        height: 100%;
+    }
+    
+    .start-button{
+        bottom:5rem;
+    }
+    .plus-button{
+        bottom:5rem;
+
+    }
+    .content-span h1{
+        font-size: .7rem;
+        margin-top: 1rem;
+    }
+    .content-span{
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .span-user{
+        margin: 0;
+        left: 0;
+        flex-direction: row;
+        font-size: .6rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .span-user span{
+        margin-left: .5rem;
+    }
+    .type{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .type span{
+        margin-left: .5rem;
+    }
+    .type span{
+        font-size: .6rem;
+    }
 }
 </style>
