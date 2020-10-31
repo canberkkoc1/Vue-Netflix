@@ -1,19 +1,19 @@
 <template>
     <div class="dizi">
-        <InfoVideo></InfoVideo>
-      <NormalCard>         
+      <NormalCard>
       </NormalCard>
+      <GundemCard></GundemCard>
     </div>
 </template>
 
 <script>
-import InfoVideo from '@/components/Infovideo'
 import NormalCard from '@/components/Normalcard'
+import GundemCard from '@/components/Gundem'
     export default {
         name:"Enyeni",
-        components:{
-            InfoVideo,
+        components:{            
             NormalCard,
+            GundemCard
         }
     }
 </script>

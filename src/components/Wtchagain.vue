@@ -1,18 +1,18 @@
 <template>
     <div class="example">
         <div class="header">
-            <h1>canberk, İzlemeye Devam Et</h1>
+            <h1>Tekrar İzle</h1>
         </div>
     <swiper class="swiper" :options="swiperOption" 
     >
       <swiper-slide class="slider"
-        v-for="(slide,i) in swiperSlides"
-        :key="i"
+        v-for="(slide,x) in swiperSlides"
+        :key="x+='a'"
       >       
         <div class="image-div" >
-          <img :src="slide" alt="" class="image" @mouseover="showSp(i)" @mouseleave="dontSp(i)">    
+          <img :src="slide" alt="" class="image" @mouseover="showSps(x)" @mouseleave="dontSps(x)">    
            
-           <div class="spans-normal" :id="i" @mouseover="showSp(i)" @mouseleave="dontSp(i)">
+           <div class="spans-normal-wtch" :id="x"  @mouseover="showSps(x)" @mouseleave="dontSps(x)">
             <div class="buttons-card-icons">
              <button class="start-button">
                <md-avatar>
@@ -64,9 +64,7 @@ import PlusIcon from '@/icons/plus.svg'
 import LikeIcon from '@/icons/like.svg'
 import DislikeIcon from '@/icons/dislike.svg'
     export default {
-      
-
-        name:"Normalcard",
+        name:"wtch",
         components:{
             Swiper,
             SwiperSlide,
@@ -92,37 +90,41 @@ import DislikeIcon from '@/icons/dislike.svg'
           }
         },
         swiperSlides: [
-            "https://i.pinimg.com/564x/46/4e/2a/464e2a939dd1e56d509e80d0a3ed7d95.jpg",
-            "https://i.pinimg.com/564x/14/54/c9/1454c9bc156a621823a6013f993c6e67.jpg",
-            "https://i.pinimg.com/564x/e8/6a/1b/e86a1b175e6f1d742580373fb1b30cf4.jpg",
+            "https://i.pinimg.com/564x/46/58/e5/4658e5125e2c643eb48e897b2daeb1c5.jpg",
+            "https://i.pinimg.com/564x/7d/14/97/7d1497d01c390a3a4cee29232b490a3a.jpg",
+            "https://i.pinimg.com/564x/1d/a2/f6/1da2f6fffc93043be91ac7c8436a40f2.jpg",
             "https://i.pinimg.com/236x/49/ab/37/49ab376f7cdfca3735888bac94b5741c.jpg",
-            "https://i.pinimg.com/564x/59/53/eb/5953eb3199a5d46eabeb4332fb408b81.jpg",
-            "https://i.pinimg.com/564x/1b/e1/65/1be1655a9d05de72733af54029d65b18.jpg",
+            "https://i.pinimg.com/564x/f7/e5/0f/f7e50f6434185ecd0702a43b141612ee.jpg",
+            "https://i.pinimg.com/564x/85/3e/72/853e725ceec9eb79143216c21c051124.jpg",
             "https://i.pinimg.com/564x/46/4e/2a/464e2a939dd1e56d509e80d0a3ed7d95.jpg",
-            "https://i.pinimg.com/564x/14/54/c9/1454c9bc156a621823a6013f993c6e67.jpg",
-            "https://i.pinimg.com/564x/e8/6a/1b/e86a1b175e6f1d742580373fb1b30cf4.jpg",
+            "https://i.pinimg.com/564x/46/58/e5/4658e5125e2c643eb48e897b2daeb1c5.jpg",
+            "https://i.pinimg.com/564x/7d/14/97/7d1497d01c390a3a4cee29232b490a3a.jpg",
+            "https://i.pinimg.com/564x/1d/a2/f6/1da2f6fffc93043be91ac7c8436a40f2.jpg",
             "https://i.pinimg.com/236x/49/ab/37/49ab376f7cdfca3735888bac94b5741c.jpg",
-            "https://i.pinimg.com/564x/59/53/eb/5953eb3199a5d46eabeb4332fb408b81.jpg",
-            "https://i.pinimg.com/564x/1b/e1/65/1be1655a9d05de72733af54029d65b18.jpg",
+            "https://i.pinimg.com/564x/f7/e5/0f/f7e50f6434185ecd0702a43b141612ee.jpg",
+            "https://i.pinimg.com/564x/85/3e/72/853e725ceec9eb79143216c21c051124.jpg",
             "https://i.pinimg.com/564x/46/4e/2a/464e2a939dd1e56d509e80d0a3ed7d95.jpg",
-            "https://i.pinimg.com/564x/14/54/c9/1454c9bc156a621823a6013f993c6e67.jpg",
-            "https://i.pinimg.com/564x/e8/6a/1b/e86a1b175e6f1d742580373fb1b30cf4.jpg",
+            "https://i.pinimg.com/564x/46/58/e5/4658e5125e2c643eb48e897b2daeb1c5.jpg",
+            "https://i.pinimg.com/564x/7d/14/97/7d1497d01c390a3a4cee29232b490a3a.jpg",
+            "https://i.pinimg.com/564x/1d/a2/f6/1da2f6fffc93043be91ac7c8436a40f2.jpg",
             "https://i.pinimg.com/236x/49/ab/37/49ab376f7cdfca3735888bac94b5741c.jpg",
-            "https://i.pinimg.com/564x/59/53/eb/5953eb3199a5d46eabeb4332fb408b81.jpg",
-            "https://i.pinimg.com/564x/1b/e1/65/1be1655a9d05de72733af54029d65b18.jpg",
+            "https://i.pinimg.com/564x/f7/e5/0f/f7e50f6434185ecd0702a43b141612ee.jpg",
+            "https://i.pinimg.com/564x/85/3e/72/853e725ceec9eb79143216c21c051124.jpg",
+            "https://i.pinimg.com/564x/46/4e/2a/464e2a939dd1e56d509e80d0a3ed7d95.jpg",
         ]
       }
     },
     methods:{
-       showSp(i){
-         let ch = document.getElementById(i)
-         ch.style.display = "block"
+       showSps(x){
+         let chs = document.getElementById(x)
+         chs.style.display = "block"
+         console.log(chs)
          
          
        },     
-      dontSp(i){
-        let ch = document.getElementById(i)
-         ch.style.display = "none"
+      dontSps(x){
+        let chs = document.getElementById(x)
+         chs.style.display = "none"
       }
     }
     }
@@ -163,7 +165,7 @@ import DislikeIcon from '@/icons/dislike.svg'
 .md-progress-bar {
     margin: 14px;
   }
-  .spans-normal{    
+  .spans-normal-wtch{    
     display: none;
     position: absolute;
     bottom: 0;

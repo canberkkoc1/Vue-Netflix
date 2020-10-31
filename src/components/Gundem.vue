@@ -1,18 +1,19 @@
 <template>
-    <div class="example">
+    
+<div class="example">
         <div class="header">
-            <h1>canberk, İzlemeye Devam Et</h1>
+            <h1>Gündemdekiler</h1>
         </div>
     <swiper class="swiper" :options="swiperOption" 
     >
       <swiper-slide class="slider"
-        v-for="(slide,i) in swiperSlides"
-        :key="i"
+        v-for="(slide,x) in swiperSlides"
+        :key="x+='b'"
       >       
         <div class="image-div" >
-          <img :src="slide" alt="" class="image" @mouseover="showSp(i)" @mouseleave="dontSp(i)">    
+          <img :src="slide" alt="" class="image" @mouseover="showSpy(x)" @mouseleave="dontSpy(x)">    
            
-           <div class="spans-normal" :id="i" @mouseover="showSp(i)" @mouseleave="dontSp(i)">
+           <div class="spans-normal-wtch" :id="x"  @mouseover="showSpy(x)" @mouseleave="dontSpy(x)">
             <div class="buttons-card-icons">
              <button class="start-button">
                <md-avatar>
@@ -64,9 +65,7 @@ import PlusIcon from '@/icons/plus.svg'
 import LikeIcon from '@/icons/like.svg'
 import DislikeIcon from '@/icons/dislike.svg'
     export default {
-      
-
-        name:"Normalcard",
+        name:"wtch",
         components:{
             Swiper,
             SwiperSlide,
@@ -92,37 +91,42 @@ import DislikeIcon from '@/icons/dislike.svg'
           }
         },
         swiperSlides: [
-            "https://i.pinimg.com/564x/46/4e/2a/464e2a939dd1e56d509e80d0a3ed7d95.jpg",
-            "https://i.pinimg.com/564x/14/54/c9/1454c9bc156a621823a6013f993c6e67.jpg",
-            "https://i.pinimg.com/564x/e8/6a/1b/e86a1b175e6f1d742580373fb1b30cf4.jpg",
-            "https://i.pinimg.com/236x/49/ab/37/49ab376f7cdfca3735888bac94b5741c.jpg",
-            "https://i.pinimg.com/564x/59/53/eb/5953eb3199a5d46eabeb4332fb408b81.jpg",
-            "https://i.pinimg.com/564x/1b/e1/65/1be1655a9d05de72733af54029d65b18.jpg",
-            "https://i.pinimg.com/564x/46/4e/2a/464e2a939dd1e56d509e80d0a3ed7d95.jpg",
-            "https://i.pinimg.com/564x/14/54/c9/1454c9bc156a621823a6013f993c6e67.jpg",
-            "https://i.pinimg.com/564x/e8/6a/1b/e86a1b175e6f1d742580373fb1b30cf4.jpg",
-            "https://i.pinimg.com/236x/49/ab/37/49ab376f7cdfca3735888bac94b5741c.jpg",
-            "https://i.pinimg.com/564x/59/53/eb/5953eb3199a5d46eabeb4332fb408b81.jpg",
-            "https://i.pinimg.com/564x/1b/e1/65/1be1655a9d05de72733af54029d65b18.jpg",
-            "https://i.pinimg.com/564x/46/4e/2a/464e2a939dd1e56d509e80d0a3ed7d95.jpg",
-            "https://i.pinimg.com/564x/14/54/c9/1454c9bc156a621823a6013f993c6e67.jpg",
-            "https://i.pinimg.com/564x/e8/6a/1b/e86a1b175e6f1d742580373fb1b30cf4.jpg",
-            "https://i.pinimg.com/236x/49/ab/37/49ab376f7cdfca3735888bac94b5741c.jpg",
-            "https://i.pinimg.com/564x/59/53/eb/5953eb3199a5d46eabeb4332fb408b81.jpg",
-            "https://i.pinimg.com/564x/1b/e1/65/1be1655a9d05de72733af54029d65b18.jpg",
+            "https://i.pinimg.com/564x/2b/96/85/2b9685062de3e5064f739ce24a2c2dfa.jpg",
+            "https://i.pinimg.com/564x/83/0a/13/830a137e7000afb6090125666e91939c.jpg",
+            "https://i.pinimg.com/564x/2d/73/ba/2d73bafe2380467f7d26ecb155b81c9e.jpg",
+            "https://i.pinimg.com/564x/f6/3e/ed/f63eedf4bf47c65a127327d34d67ccbe.jpg",
+            "https://i.pinimg.com/564x/ef/98/74/ef98746f852a4a451b8f7d0228858a44.jpg",
+            "https://i.pinimg.com/564x/2e/84/00/2e8400ce946dbf1bead0689d9a2d3acd.jpg",
+            "https://i.pinimg.com/564x/89/8d/84/898d84e8181969fef40fb98f391094f9.jpg",
+            "https://i.pinimg.com/564x/2b/96/85/2b9685062de3e5064f739ce24a2c2dfa.jpg",
+            "https://i.pinimg.com/564x/83/0a/13/830a137e7000afb6090125666e91939c.jpg",
+            "https://i.pinimg.com/564x/2d/73/ba/2d73bafe2380467f7d26ecb155b81c9e.jpg",
+            "https://i.pinimg.com/564x/f6/3e/ed/f63eedf4bf47c65a127327d34d67ccbe.jpg",
+            "https://i.pinimg.com/564x/ef/98/74/ef98746f852a4a451b8f7d0228858a44.jpg",
+            "https://i.pinimg.com/564x/2e/84/00/2e8400ce946dbf1bead0689d9a2d3acd.jpg",
+            "https://i.pinimg.com/564x/89/8d/84/898d84e8181969fef40fb98f391094f9.jpg",
+            "https://i.pinimg.com/564x/2b/96/85/2b9685062de3e5064f739ce24a2c2dfa.jpg",
+            "https://i.pinimg.com/564x/83/0a/13/830a137e7000afb6090125666e91939c.jpg",
+            "https://i.pinimg.com/564x/2d/73/ba/2d73bafe2380467f7d26ecb155b81c9e.jpg",
+            "https://i.pinimg.com/564x/f6/3e/ed/f63eedf4bf47c65a127327d34d67ccbe.jpg",
+            "https://i.pinimg.com/564x/ef/98/74/ef98746f852a4a451b8f7d0228858a44.jpg",
+            "https://i.pinimg.com/564x/2e/84/00/2e8400ce946dbf1bead0689d9a2d3acd.jpg",
+            "https://i.pinimg.com/564x/89/8d/84/898d84e8181969fef40fb98f391094f9.jpg",
+            
         ]
       }
     },
     methods:{
-       showSp(i){
-         let ch = document.getElementById(i)
-         ch.style.display = "block"
+       showSpy(x){
+         let chs = document.getElementById(x)
+         chs.style.display = "block"
+         console.log(chs)
          
          
        },     
-      dontSp(i){
-        let ch = document.getElementById(i)
-         ch.style.display = "none"
+      dontSpy(x){
+        let chs = document.getElementById(x)
+         chs.style.display = "none"
       }
     }
     }
@@ -131,7 +135,7 @@ import DislikeIcon from '@/icons/dislike.svg'
 <style scoped>
 .example{
   width: 100%;
-  min-height: 50vh;
+  min-height: 100vh;
   position: relative;
  
 }
@@ -163,7 +167,7 @@ import DislikeIcon from '@/icons/dislike.svg'
 .md-progress-bar {
     margin: 14px;
   }
-  .spans-normal{    
+  .spans-normal-wtch{    
     display: none;
     position: absolute;
     bottom: 0;

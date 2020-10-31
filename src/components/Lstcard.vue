@@ -2,17 +2,17 @@
     <div class="lstcard">
  <md-card class="card">
       <md-card-media-cover md-solid class="card-media"
-      v-for="img in 14"
-      :key="img"
+      v-for="(img, i) in 14"
+      :key="i+='c'"
       
       >
         <md-card-media class="image-card" >
-          <img src="../assets/img/movie2.jpg" alt="movie" v-if="img %2 === 0">
-          <img src="../assets/img/movie1.jpg" alt="movie" v-else>
+          <img src="../assets/img/movie2.jpg" alt="movie" v-if="img %2 === 0" @mouseover="showSph(i)" @mouseleave="dontSph(i)">
+          <img src="../assets/img/movie1.jpg" alt="movie" v-else @mouseover="showSph(i)" @mouseleave="dontSph(i)">
 
-        <md-card-area class="area">
-          <md-card-header>
-           <div class="spans">
+        <md-card-area class="area" :id="i" >
+          <md-card-header >
+           <div class="spans" >
                <div class="buttons-card-icons">
              <button class="start-button">
                <md-avatar>
@@ -40,7 +40,7 @@
              </button>
             </div>
              <div class="content-span">
-              <md-progress-bar class="md-accent" md-mode="determinate" :md-value="amount"></md-progress-bar>
+              <md-progress-bar class="md-accent" md-mode="determinate" :md-value="10"></md-progress-bar>
                  
              </div> 
             
@@ -70,11 +70,19 @@ import DislikeIcon from '@/icons/dislike.svg'
             LikeIcon,
             DislikeIcon
         },
-        data(){
-            return{
-                
-            }
-        }
+        methods:{
+       showSph(i){
+         let hhs = document.getElementById(i)
+         hhs.style.display = "block"
+         console.log(i)        
+         
+         
+       },     
+      dontSph(i){
+        let hhs = document.getElementById(i)
+         hhs.style.display = "none"
+      }
+    }
     }
 </script>
 
@@ -184,7 +192,5 @@ img:hover{
     fill:white !important;
 }
 
-img:hover + .area{
-    display: inline-block;
-}
+
 </style>

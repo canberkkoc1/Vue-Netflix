@@ -83,9 +83,7 @@ import NetflixIcon from '@/icons/netflix.svg'
     align-items: center;
     color: rgb(255, 255, 255);    
 }
-.logo{
-    
-}
+
 .navigation{
     width: 25rem;
     display: flex;
@@ -107,8 +105,7 @@ import NetflixIcon from '@/icons/netflix.svg'
     margin-right:28px;
     text-align: end;
 }
-.search-button{
-}
+
 .cocuk{
     width: 3rem;
     text-align: center;

@@ -106,7 +106,7 @@ import LoudIcon from '@/icons/loud.svg'
 .buttons-view{
     margin-top: 2rem;
     display: flex;
-    width: 45%;
+    width: 60%;
     justify-content: space-around;
 }
 .play-button {

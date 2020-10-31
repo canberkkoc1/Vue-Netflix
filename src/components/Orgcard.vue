@@ -5,12 +5,12 @@
         </div>
     <swiper class="swiper" :options="swiperOption">
       <swiper-slide class="slider"
-        v-for="slide in swiperSlides"
-        :key="slide"
+        v-for="(slide,i) in swiperSlides"
+        :key="i+='t'"
       >
-            <div class="image-div">
-          <img :src="slide" alt="" class="image">
-          <div class="spans">
+            <div class="image-div"  >
+          <img :src="slide" alt="" class="image" @mouseover="showSpan(i)" @mouseleave="dontShow(i)">
+          <div class="spans-cardss" :id="i" @mouseover="showSpan(i)" @mouseleave="dontShow(i)" >
              <button class="start-button">
                  <StarIcon class="startIcon"></StarIcon>
              </button>
@@ -33,8 +33,6 @@
           </div>
       </div>
       </swiper-slide>
-      <div class="swiper-button-prev" slot="button-prev"></div>
-      <div class="swiper-button-next" slot="button-next"></div>
     </swiper>
   </div>
 </template>
@@ -88,7 +86,18 @@ import PlusIcon from '@/icons/plus.svg'
             "https://i.pinimg.com/564x/1b/e1/65/1be1655a9d05de72733af54029d65b18.jpg",
         ]
       }
-    },   
+    },  
+     methods:{
+         showSpan(i){
+             console.log(i)
+             let spans = document.getElementById(i)
+             spans.style.display="block"
+         },
+         dontShow(i){
+             let spans = document.getElementById(i)
+             spans.style.display="none"
+         }
+     } 
         
 }
 </script>
@@ -154,7 +163,7 @@ button:hover{
 .header{
     color:white;
 }
-.spans{
+.spans-cardss{
     display: none;
     background-color: rgb(22, 22, 22,.5);
     width: 100%;
@@ -221,9 +230,7 @@ button:hover{
     justify-content: space-evenly;
     align-items: center;
 }
-img:hover + .spans{
-    display: inline-block;
-}
+
 
 @media (max-width:1200px){
     .header{

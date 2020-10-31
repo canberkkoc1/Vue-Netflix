@@ -3,6 +3,8 @@
       <InfoVideo></InfoVideo>    
       <OrgCard></OrgCard>
       <NormalCard></NormalCard>
+      <WtchCard></WtchCard>
+      <GundemCard></GundemCard>
     </div>
 </template>
 
@@ -10,12 +12,16 @@
 import InfoVideo from '@/components/Infovideo'
 import OrgCard from '@/components/Orgcard'
 import NormalCard from '@/components/Normalcard'
+import WtchCard from '@/components/Wtchagain'
+import GundemCard from '@/components/Gundem'
     export default {
         name:"Home",
         components:{
             InfoVideo,
             OrgCard,
-            NormalCard
+            NormalCard,
+            WtchCard,
+            GundemCard
         }
     }
 </script>
