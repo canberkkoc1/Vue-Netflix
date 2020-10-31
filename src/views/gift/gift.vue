@@ -18,24 +18,24 @@
             <h3>Veya</h3>
             <div class="icons">
                 <div class="icon-cont">
-                    <MailIcon class="mail iconsvg"></MailIcon>
+                    <MailIcon class="mail iconsvg fonk"></MailIcon>
 
                 </div>
                 <div class="icon-cont">
-                <WpIcon class="wp iconsvg"></WpIcon>
+                <WpIcon class="wp iconsvg fonk"></WpIcon>
 
                 </div>
                 <div class="icon-cont">
-                    <FacebookIcon class="facebok iconsvg"></FacebookIcon>
+                    <FacebookIcon class="facebok iconsvg fonk"></FacebookIcon>
 
                 </div>
                 <div class="icon-cont">
 
-                    <TwitterIcon class="twitter iconsvg"></TwitterIcon>
+                    <TwitterIcon class="twitter iconsvg fonk"></TwitterIcon>
                 </div>
                 <div class="icon-cont">
 
-                    <MessIcon class="mess iconsvg"></MessIcon>
+                    <MessIcon class="mess iconsvg fonk"></MessIcon>
                 </div>
             
         
@@ -52,15 +52,15 @@
             <h3>NASIL ÇALIŞIR?</h3>
             <div class="threeth">
                 <div class="one">
-                    <ShareIcon class="iconsvg share"></ShareIcon>
+                    <ShareIcon class="iconsvg sized"></ShareIcon>
                     <div class="outl">
                         <h4>1. Adım</h4>
                         <p>Bağlantıyı kopyalayarak ya da simgelerden birini seçerek bağlantıyı arkadaşlarınızla paylaşın.</p>
                     </div>
                 </div>
-                <ArrowIcon class="iconsvg"></ArrowIcon>
+                <ArrowIcon class="iconsvg sized"></ArrowIcon>
                 <div class="two">
-                    <NewsIcon class="iconsvg"></NewsIcon>
+                    <NewsIcon class="iconsvg sized"></NewsIcon>
                     <div class="outl">
                     <h4>2. Adım</h4>
                         <p>Bir arkadaşınız kaydolduğunda size haber vereceğiz.</p>
@@ -69,7 +69,7 @@
                 </div>
                 <ArrowIcon class="iconsvg" ></ArrowIcon>
                 <div class="thrr">
-                    <PopupIcon class="iconsvg"></PopupIcon>
+                    <PopupIcon class="iconsvg sized"></PopupIcon>
                     <div class="outl">
                     <h4>3. Adım</h4>
                         <p>Dilediğiniz kadar arkadaşınızla ve akrabanızla paylaşabilirsiniz.</p>
@@ -185,6 +185,10 @@ import ArrowIcon from '@/icons/arrow.svg'
 .iconsvg{
     width: 24px;
     height: 24px;
+    
+}
+.fonk{
+    cursor: pointer;
 }
 .allitem .icons{
     display: flex;
@@ -214,6 +218,7 @@ import ArrowIcon from '@/icons/arrow.svg'
     align-items: center;
 }
 .one{
+    
     width: 40%;
     height: 5.5rem;
     display: flex;
@@ -236,8 +241,13 @@ import ArrowIcon from '@/icons/arrow.svg'
 }
 .outl{
     margin-left:1rem;
+    margin-top:.5rem ;
 }
-.share{
+.outl p{
+    font-size: .7rem;
+}
+.sized{
     width: 64px;
+    margin-top:.5rem ;
 }
 </style>

@@ -31,8 +31,8 @@
                 <router-link to="/gift" class="gift">
                     <GiftIcon class="gift-icon"></GiftIcon>
                 </router-link>
-                <router-link to="/alrm" class="alrm">
-                    <AlarmIcon class="alrm-icon"></AlarmIcon>
+                <router-link to="/" class="alrm">
+                    <AlarmIcon class="alrm-icon" @mousemove="hover"></AlarmIcon>
                 </router-link>
                 <router-link to="/account" >
                     <img src="https://occ-0-3727-300.1.nflxso.net/dnm/api/v6/0RO1pLmU93-gdXvuxd_iYjzPqkc/AAAABaPolEEq5s2QRP_CDO2Y0XKN6lbRAkH-S-B5XcfR-7xdSV2k-1VPzx54xaySu7czNLu8U4t5Q8lhLZMzIBPgxcA.png?r=a41" alt="">
@@ -61,6 +61,7 @@ import NetflixIcon from '@/icons/netflix.svg'
         data:()=>{
             return {
                 show:false,
+                hover:false
             }
         }
     }
