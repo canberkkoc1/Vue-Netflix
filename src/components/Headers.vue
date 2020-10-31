@@ -20,14 +20,14 @@
             <div class="right">
                 <!-- SEARCH -->
                 <div class="search">
-                    <input type="text" name="" id="" v-show="show" class="inputSearch" >
+                    <!-- <input type="text" name="" id="" v-show="show" class="inputSearch" > -->
                         <button class="search-button" @click="show ^= true" vue>
                             <SearchIcon class="icon-search" ></SearchIcon>
                         </button>
 
                 </div>
                 <!-- OTHER -->
-                <router-link to="/cocuk" class="cocuk">Çocuk</router-link>
+                <router-link to="/" class="cocuk">Çocuk</router-link>
                 <router-link to="/gift" class="gift">
                     <GiftIcon class="gift-icon"></GiftIcon>
                 </router-link>

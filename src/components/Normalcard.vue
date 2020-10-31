@@ -3,13 +3,14 @@
         <div class="header">
             <h1>canberk, İzlemeye Devam Et</h1>
         </div>
-    <swiper class="swiper" :options="swiperOption">
+    <swiper class="swiper" :options="swiperOption" >
       <swiper-slide class="slider"
         v-for="slide in swiperSlides"
         :key="slide"
-      >
-            <div class="image-div">
-          <img :src="slide" alt="" class="image">         
+      >       
+        <div class="image-div" >
+          <img :src="slide" alt="" class="image" >    
+           
            <div class="spans">
             <div class="buttons-card-icons">
              <button class="start-button">
@@ -41,9 +42,10 @@
               <md-progress-bar class="md-accent" md-mode="determinate" :md-value="amount"></md-progress-bar>
                  
              </div> 
+          </div>  
           
-          </div>
-      </div>
+      
+       </div>
       </swiper-slide>
       <div class="swiper-button-prev" slot="button-prev"></div>
       <div class="swiper-button-next" slot="button-next"></div>
@@ -58,9 +60,10 @@
         v-for="slide in swiperSlides"
         :key="slide"
       >
-            <div class="image-div">
-          <img :src="slide" alt="" class="image">         
-           <div class="spans">
+            <div class="image-div" >
+          <img :src="slide" alt="" class="image"  > 
+
+           <div class="spans" >
             <div class="buttons-card-icons">
              <button class="start-button">
                <md-avatar>
@@ -108,9 +111,9 @@
         v-for="slide in swiperSlides"
         :key="slide"
       >
-            <div class="image-div">
-          <img :src="slide" alt="" class="image">         
-           <div class="spans">
+            <div class="image-div">              
+                  <img :src="slide" alt="" class="image" >  
+          <div class="spans" >
             <div class="buttons-card-icons">
              <button class="start-button">
                <md-avatar>
@@ -161,6 +164,8 @@ import PlusIcon from '@/icons/plus.svg'
 import LikeIcon from '@/icons/like.svg'
 import DislikeIcon from '@/icons/dislike.svg'
     export default {
+      
+
         name:"Normalcard",
         components:{
             Swiper,
@@ -172,9 +177,10 @@ import DislikeIcon from '@/icons/dislike.svg'
         },
         data(){
             return {
+              hover:false,
               amount: 40,
               swiperOption: {
-          slidesPerView: 4,
+          slidesPerView: 6,
           centeredSlides: false,
           pagination: {
             el: '.swiper-pagination',
@@ -214,6 +220,7 @@ import DislikeIcon from '@/icons/dislike.svg'
 .example{
   width: 100%;
   min-height: 100vh;
+  position: relative;
 }
 .header h1{
   color:white;
@@ -222,24 +229,27 @@ import DislikeIcon from '@/icons/dislike.svg'
 .swiper{
   height: 20rem;
   
+  
 }
 .image-div{
   height: 100%;
-  position: flex;
+  position: relative;
+  background-color: blue;
   overflow: hidden;
+  z-index: 9999;
 }
 .image{
-  vertical-align: top !important;
   height: 100%;
   width: 100%;
   transition: all .5s ease-in-out;
   position: relative;
 }
 .md-progress-bar {
-    margin: 24px;
+    margin: 14px;
   }
-   .spans{    
-     position: relative;
+  .spans{    
+    display: none;
+     position: absolute;
     bottom: 0;
     left: 0;
     right: 0; 
@@ -247,8 +257,10 @@ import DislikeIcon from '@/icons/dislike.svg'
     height: 30%;
     background-color: #181818;
     color:white;
+    transition: all 1s ease-in-out;
 
-  } 
+  }  
+  
   .start-button{
     width: 2rem;
     border-radius: 999px;
@@ -313,16 +325,19 @@ import DislikeIcon from '@/icons/dislike.svg'
   align-items: center;
   
 }
+.images{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
 
-.image:hover{
-    transform: scale(1.2);
-   z-index: 9999;
-}
-.image:hover + .spans { 
-  position: absolute;
-  z-index: 9999999;
-      
-}
+ .image:hover{
+    transform: scale(1.4)
+}  
+.image:hover + .spans{
+  display: block;
+} 
+
 
 </style>

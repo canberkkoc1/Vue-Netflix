@@ -1,12 +1,20 @@
 <template>
     <div class="dizi">
-      <h1 >HELLLO enyeni</h1>
+        <InfoVideo></InfoVideo>
+      <NormalCard>         
+      </NormalCard>
     </div>
 </template>
 
 <script>
+import InfoVideo from '@/components/Infovideo'
+import NormalCard from '@/components/Normalcard'
     export default {
-        name:"Enyeni"
+        name:"Enyeni",
+        components:{
+            InfoVideo,
+            NormalCard,
+        }
     }
 </script>
 

@@ -1,12 +1,17 @@
 <template>
     <div class="dizi">
-      <h1 >HELLLO</h1>
+        <ListCard></ListCard>
     </div>
 </template>
 
 <script>
+import ListCard from '@/components/Lstcard'
+
     export default {
-        name:"Listem"
+        name:"Listem",
+        components:{
+            ListCard
+        }
     }
 </script>
 
