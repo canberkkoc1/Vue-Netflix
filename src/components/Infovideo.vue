@@ -1,7 +1,7 @@
 <template>
     <div class="video-container">
         <div class="video">
-            <video autoplay loop controls class="infoVideo">
+            <video autoplay loop class="infoVideo">
                 <source src="../assets/video/monster.mp4" type="video/mp4">
             </video>
         </div>       
